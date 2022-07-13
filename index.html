@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Site</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <form id="fromId">
+            Имя
+        <input type="text" name="name" id="nameId"><br>
+            Телефон
+        <input type="text" name="phone" id="phoneId"><br>
+            Email
+        <input type="email" name="email" id="emailId"><br>
+            Город
+        <input type="text" name="city" id="cityId"><br>
+            Услуга
+        <select id="serviceId">
+            <option value="  ">Выбор услуги</option>
+                <option>Диагностика</option>
+                <option>Ремонт</option>
+        </select><br>
+            Комментарий
+        <textarea placeholder="Комментарий" id="messageId"></textarea>
+        <button type="button" name="button" id="sendBtn">Создать заявку</button>
+    </form>
+
+    <script src="./jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+    </body>
+</html>
