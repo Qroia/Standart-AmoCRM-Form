@@ -4,30 +4,78 @@
         <title>Site</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
     </head>
     <body>
-    <form id="fromId">
-            Имя
-        <input type="text" name="name" id="nameId"><br>
-            Телефон
-        <input type="text" name="phone" id="phoneId"><br>
-            Email
-        <input type="email" name="email" id="emailId"><br>
-            Город
-        <input type="text" name="city" id="cityId"><br>
-            Услуга
-        <select id="serviceId">
-            <option value="  ">Выбор услуги</option>
-                <option>Диагностика</option>
-                <option>Ремонт</option>
-        </select><br>
-            Комментарий
-        <textarea placeholder="Комментарий" id="messageId"></textarea>
-        <button type="button" name="button" id="sendBtn">Создать заявку</button>
-    </form>
-
-    <script src="./jquery.min.js"></script>
-    <script src="./js/index.js"></script>
+        <div class="flex justify-center mb-3">
+            <form class="w-full max-w-lg" id="formId">
+                <div class="flex flex-wrap -mx-3 mb-6">
+                  <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                      Имя
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Ivan">
+                    <p class="text-red-500 text-xs italic">*Это обязательное поле</p>
+                  </div>
+                  <div class="w-full md:w-1/2 px-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                      Фамилия
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Ivanov">
+                    <p class="text-red-500 text-xs italic">*Это обязательное поле</p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-2">
+                  <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email-form">
+                      Email
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email-form" type="text" placeholder="example@domain.com">
+                    <p class="text-red-500 text-xs italic">*Это обязательное поле</p>
+                  </div>
+                  <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="phn-form">
+                      Телефон
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="phn-form" type="text" placeholder="79006001122">
+                    <p class="text-red-500 text-xs italic">*Это обязательное поле</p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-2">
+                  <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="city-form">
+                      Город
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="city-form" type="text" placeholder="Казань">
+                    <p class="text-red-500 text-xs italic">*Это обязательное поле</p>
+                  </div>
+                  <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="service-form">
+                      Услуга
+                    </label>
+                    <div class="relative">
+                      <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="service-form">
+                        <option>Диагностика</option>
+                        <option>Обслуживание</option>
+                        <option>Ремонт</option>
+                      </select>
+                      <p class="text-red-500 text-xs italic">*Это обязательное поле</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-wrap -mx-0 mb-2">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="msg-form">
+                        Комментарий
+                    </label>
+                    <textarea class="form-control block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="Минимум 10 символов" id="msg-form"></textarea>
+                    <p class="text-red-500 text-xs italic">*Это обязательное поле</p>
+                </div>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" type="button" name="button" id="send-btn-form">
+                    Создать заявку
+                </button>
+              </form>
+        </div>
+        <script src="./jquery.min.js"></script>
+        <script src="./js/index.js"></script>
     </body>
 </html>
